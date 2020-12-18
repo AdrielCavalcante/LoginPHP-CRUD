@@ -7,7 +7,7 @@ body{
     background-color: #1f2e59;
 }
 
-.caixa{
+.adiciona{
     position: absolute;
     background-color: rgb(73, 85, 126);
     max-width: 400px;
@@ -21,14 +21,14 @@ body{
     border-style:dashed;
 }
 
-.caixa h1{
+.adiciona h1{
     color:rgb(19, 18, 18);
     text-transform: uppercase;
     font-weight: 500;
     
 }
 
-.caixa input[type = "text"], .caixa input[type = "password"]{
+.adiciona input[type = "text"],.adiciona input[type = "email"],.adiciona input[type = "number"], .adiciona input[type = "password"]{
     border: 0;
     background: lightgrey;
     display: block;
@@ -36,7 +36,7 @@ body{
     text-align: center;
     border: 2px solid blueviolet;
     padding: 14px 10px;
-    max-width: 200px;
+    max-width: 250px;
     width: 100%;
     outline: none;
     color: rgb(14, 21, 22);
@@ -44,13 +44,13 @@ body{
     transition: 0.25s;
 }
 
-.caixa input[type = "text"]:focus, .caixa input[type = "password"]:focus{
-    max-width: 280px;
+.adiciona input[type = "text"]:focus,.adiciona input[type = "email"]:focus,.adiciona input[type = "number"]:focus, .caixa input[type = "password"]:focus{
+    max-width: 300px;
     width: 100%;
     border: 2px solid purple;
 }
 
-.caixa button{
+.adiciona button{
     border: 0;
     background: none;
     display: block;
@@ -65,27 +65,6 @@ body{
     cursor: pointer;
 }
 
-.caixa button:hover{
+.adiciona button:hover{
     background: purple;
-}
-
-
-li{
-    position: absolute;
-    display: block;
-    background-color: rgba(186, 90, 90, 0.569);
-    color: rgb(164, 0, 0);
-    left: 35%;
-    top: 528px;
-    padding: 5px 5px 5px 5px;
-}
-
-h6{
-    position: absolute;
-    display: block;
-    background-color: rgba(31, 234, 234, 0.812);
-    color: rgb(0, 0, 0);
-    left: 44%;
-    top: 505px;
-    padding: 5px 5px 5px 5px;
 }

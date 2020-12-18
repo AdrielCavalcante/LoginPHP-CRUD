@@ -3,8 +3,11 @@
 require_once 'db_connect.php';
 //sessão
 session_start();
+if(isset($_SESSION['mensagem'])):
+    echo "<h6>".$_SESSION['mensagem']."</h6>";
+endif;
+session_unset();
 // Botão enviar
-
 if(isset($_POST['btn'])):
     $erros = array();
     $login = mysqli_escape_string($connect,$_POST['login']);
@@ -61,9 +64,10 @@ endif;
         <input type="text" name="login" placeholder="Login">
         <input type="password" name="senha" placeholder="Senha">
         <button type="submit" name="btn">Entrar</button>
-        
+        <a href="../html/CriarConta.html"><button type="button">Criar conta</button></a> 
         <h5>Obs: Ler o db_connect.php!!!</h5>
     </form>
+        
     
 </body>
 </html>
