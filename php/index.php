@@ -42,10 +42,11 @@ endif;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Login</title>
 </head>
 <body>
-    <h1>Login</h1>
+    
     <?php
         if(!empty($erros)):
             foreach($erros as $erro):
@@ -53,13 +54,16 @@ endif;
             endforeach;
         endif;
     ?>
-    <hr>
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        <input type="text" name="login"><br>
-        <input type="password" name="senha"><br>
+    
+    
+    <form class="caixa" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <h1>Login</h1>
+        <input type="text" name="login" placeholder="Login">
+        <input type="password" name="senha" placeholder="Senha">
         <button type="submit" name="btn">Entrar</button>
-        <br>
-        Obs: Ler o db_connect.php!!!
+        
+        <h5>Obs: Ler o db_connect.php!!!</h5>
     </form>
+    
 </body>
 </html>
