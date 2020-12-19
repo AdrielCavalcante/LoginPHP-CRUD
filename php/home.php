@@ -21,13 +21,17 @@ mysqli_close($connect);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/home.css">
-    <title>Página restrita</title>
+    <link rel="stylesheet" href="../css/Home.css">
+    <title>Sua Home</title>
 </head>
 <body>
+    <div id="divi">
     <h1>Olá <?php echo $dados['nome']; ?> </h1>
-    <a href="logout.php">Sair</a>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aspernatur omnis unde cum harum eaque quia vero deserunt eius perferendis nisi itaque quod rem autem distinctio, tenetur est saepe mollitia.<br>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio impedit consectetur reiciendis architecto facilis magni consequatur, perspiciatis eum necessitatibus provident, ipsam illum neque fugit? Ipsa sit tempore fugiat itaque totam.</p>
+    <h3 id="txt1">Clique aqui para editar a conta:</h3>
+    <h3 id="txt2">Clique aqui para deletar a conta:</h3>
+    <a href="AtualizarConta.php?id=<?php echo $dados['id']; ?>"><button id="btn1">Editar</button></a>
+    <a href="DeletarConta.php?id=<?php echo $dados['id']; ?>"><button id="btn2">Deletar</button></a>
+    <a href="logout.php" id="sair">Sair</a>
+    </div>
 </body>
 </html>

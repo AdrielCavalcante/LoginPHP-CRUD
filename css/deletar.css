@@ -7,10 +7,10 @@ body{
     background-color: #1f2e59;
 }
 
-#divi{
+.deleta{
     position: absolute;
     background-color: rgb(73, 85, 126);
-    max-width: 800px;
+    max-width: 520px;
     width: 100%;
     padding: 50px;
     top: 50%;
@@ -21,21 +21,7 @@ body{
     border-style:dashed;
 }
 
-#divi a#sair{
-    position: absolute;
-    color: white;
-    top: 87%;
-    left: 48%;
-    text-decoration: none;
-    display: block;
-    font-size: 20pt;
-}
-
-#divi a#sair:hover{
-    color: black;
-}
-
-#divi h1{
+.deleta h1{
     color:rgb(0, 0, 0);
     font-weight: 500;
     font-size: 35pt;
@@ -44,31 +30,20 @@ body{
     
 }
 
-#divi h3#txt1{
+.deleta h2{
     font-weight: bold;
     margin: 0px;
     padding: 0px;
-    max-width: 450px;
-    width: 45%;
-    position: relative;
     margin-bottom: 60px;
+    text-align: center;
 }
 
-#divi h3#txt2{
-    max-width: 450px;
-    width: 45%;
-    font-weight: bold;
-    position: absolute;
-    left: 50%;
-    top: 44%;
-}
-
-#divi button#btn1{
+.deleta button#btns{
     background: none;
     display: block;
     position: absolute;
-    top: 65%;
-    left: 18%;
+    top: 70%;
+    left: 40%;
     text-align: center;
     border: 2px solid rgb(72, 205, 217);
     outline: none;
@@ -80,16 +55,16 @@ body{
     height: 30px;
 }
 
-#divi button#btn1:hover{
+.deleta button#btns:hover{
     background: rgb(72, 205, 217);
 }
 
-#divi button#btn2{
+.deleta button#btnn{
     background: none;
     display: block;
     position: absolute;
-    top: 65%;
-    left: 67%;
+    top: 85%;
+    left: 40%;
     text-align: center;
     border: 2px solid rgb(205, 50, 50);
     outline: none;
@@ -101,7 +76,7 @@ body{
     height: 30px;
 }
 
-#divi button#btn2:hover{
+.deleta button#btnn:hover{
     background: rgb(205, 50, 50);
 }
 

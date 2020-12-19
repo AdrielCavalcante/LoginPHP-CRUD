@@ -7,6 +7,7 @@ body{
     background-color: #1f2e59;
 }
 
+
 .caixa{
     position: absolute;
     background-color: rgb(73, 85, 126);
@@ -69,6 +70,24 @@ body{
     background: purple;
 }
 
+.caixa button#criar{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid rgb(11, 180, 129);
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.caixa button#criar:hover{
+    background: rgb(11, 180, 129);
+}
 
 li{
     position: absolute;

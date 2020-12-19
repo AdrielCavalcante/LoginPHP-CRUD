@@ -7,7 +7,7 @@ body{
     background-color: #1f2e59;
 }
 
-.adiciona{
+.atualiza{
     position: absolute;
     background-color: rgb(73, 85, 126);
     max-width: 400px;
@@ -21,14 +21,14 @@ body{
     border-style:dashed;
 }
 
-.adiciona h1{
+.atualiza h1{
     color:rgb(19, 18, 18);
     text-transform: uppercase;
     font-weight: 500;
     
 }
 
-.adiciona input[type = "text"],.adiciona input[type = "email"],.adiciona input[type = "number"], .adiciona input[type = "password"]{
+.atualiza input[type = "text"],.atualiza input[type = "email"],.atualiza input[type = "number"], .atualiza input[type = "password"]{
     border: 0;
     background: lightgrey;
     display: block;
@@ -44,13 +44,13 @@ body{
     transition: 0.25s;
 }
 
-.adiciona input[type = "text"]:focus,.adiciona input[type = "email"]:focus,.adiciona input[type = "number"]:focus, .adiciona input[type = "password"]:focus{
+.atualiza input[type = "text"]:focus,.atualiza input[type = "email"]:focus,.atualiza input[type = "number"]:focus, .atualiza input[type = "password"]:focus{
     max-width: 300px;
     width: 100%;
     border: 2px solid purple;
 }
 
-.adiciona button{
+.atualiza button{
     border: 0;
     background: none;
     display: block;
@@ -65,6 +65,6 @@ body{
     cursor: pointer;
 }
 
-.adiciona button:hover{
+.atualiza button:hover{
     background: purple;
 }
