@@ -6,11 +6,16 @@ require_once 'db_connect.php';
 //Clear
 function Clear($input){
     global $connect;
-    //sql
+    if (!empty($input)):
+      //sql
     $var = mysqli_escape_string($connect,$input);
     //xss
     $var = htmlspecialchars($var);
-    return $var;
+    return $var;  
+    else:
+       global $vazio;
+       $vazio = true;
+    endif;
 }
 
 if(isset($_POST['btn-atualiza'])):
@@ -21,14 +26,18 @@ if(isset($_POST['btn-atualiza'])):
     $senha = Clear($_POST['Csenha']);
     $id = Clear($_POST['id']);
 
-    $sql = "UPDATE usuario SET nome='$nome',login='$login',email='$email',idade='$idade',senha=md5('$senha') WHERE id='$id' ";
-
-    if (mysqli_query($connect,$sql)):
-        $_SESSION['mensagem'] = "Atualizado com Sucesso!";
-        header('location: index.php?Sucesso');
+    if (!$vazio):
+        $sql = "UPDATE usuario SET nome='$nome',login='$login',email='$email',idade='$idade',senha=md5('$senha') WHERE id='$id' ";
     else:
         $_SESSION['mensagem'] = "Erro ao Atualizar!";
-        header('location: index.php?Erro');
+        header('location: index.php');
+    endif;
+    if (mysqli_query($connect,$sql)):
+        $_SESSION['mensagem'] = "Atualizado com Sucesso!";
+        header('location: index.php');
+    else:
+        $_SESSION['mensagem'] = "Erro ao Atualizar!";
+        header('location: index.php');
     endif;
 endif;
 

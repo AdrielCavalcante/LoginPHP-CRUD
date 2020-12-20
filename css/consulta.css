@@ -7,8 +7,7 @@ body{
     background-color: #1f2e59;
 }
 
-
-.caixa{
+.tela{
     position: absolute;
     background-color: rgb(73, 85, 126);
     max-width: 400px;
@@ -23,14 +22,14 @@ body{
     border-style:dashed;
 }
 
-.caixa h1{
+.tela h1{
     color:rgb(19, 18, 18);
     text-transform: uppercase;
     font-weight: 500;
     
 }
 
-.caixa input[type = "text"], .caixa input[type = "password"]{
+.tela input[type = "text"], .tela input[type = "password"]{
     border: 0;
     background: lightgrey;
     display: block;
@@ -46,19 +45,19 @@ body{
     transition: 0.25s;
 }
 
-.caixa input[type = "text"]:focus, .caixa input[type = "password"]:focus{
+.tela input[type = "text"]:focus, .tela input[type = "password"]:focus{
     max-width: 280px;
     width: 100%;
-    border: 2px solid purple;
+    border: 2px solid rgb(96, 0, 128);
 }
 
-.caixa button{
+.tela button{
     border: 0;
     background: none;
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid purple;
+    border: 2px solid rgb(0, 38, 128);
     padding: 14px 40px;
     outline: none;
     color: white;
@@ -67,47 +66,12 @@ body{
     cursor: pointer;
 }
 
-.caixa button:hover{
-    background: purple;
+.tela button:hover{
+    background: rgb(0, 38, 128);
 }
 
-.caixa button#criar{
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid rgb(11, 180, 129);
-    padding: 14px 40px;
-    outline: none;
-    color: white;
-    border-radius: 24px;
-    transition: 0.25s;
-    cursor: pointer;
-}
-
-.caixa button#criar:hover{
-    background: rgb(11, 180, 129);
-}
-
-li{
-    position: absolute;
-    display: block;
-    background-color: rgba(186, 90, 90, 0.569);
-    color: rgb(164, 0, 0);
-    top: 95%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    padding: 5px 5px 5px 5px;
-}
-
-h6{
-    position: absolute;
-    display: block;
-    background-color: rgba(31, 234, 234, 0.812);
-    color: rgb(0, 0, 0);
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%,-50%);    
-    padding: 5px 5px 5px 5px;
+.tela a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }

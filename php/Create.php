@@ -6,11 +6,16 @@ require_once 'db_connect.php';
 //Clear
 function Clear($input){
     global $connect;
-    //sql
+    if (!empty($input)):
+      //sql
     $var = mysqli_escape_string($connect,$input);
     //xss
     $var = htmlspecialchars($var);
-    return $var;
+    return $var;  
+    else:
+       global $vazio;
+       $vazio = true;
+    endif;
 }
 
 if(isset($_POST['btn-cadastro'])):
@@ -20,7 +25,12 @@ if(isset($_POST['btn-cadastro'])):
     $idade = Clear($_POST['idade']);
     $senha = Clear($_POST['Csenha']);
 
-    $sql = "INSERT INTO usuario (nome,login,email,idade,senha) VALUES ('$nome','$login','$email','$idade',md5('$senha'))";
+    if (!$vazio):
+        $sql = "INSERT INTO usuario (nome,login,email,idade,senha) VALUES ('$nome','$login','$email','$idade',md5('$senha'))";
+    else:
+        $_SESSION['mensagem'] = "Erro ao cadastrar!";
+        header('location: index.php?Erro');
+    endif;
 
     if (mysqli_query($connect,$sql)):
         $_SESSION['mensagem'] = "Cadastrado com Sucesso!";
