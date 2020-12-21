@@ -19,11 +19,12 @@ if(isset($_POST['btn'])):
         $resultado = mysqli_query($connect,$sql);
 
         if(mysqli_num_rows($resultado)):
-            $senha = md5($senha);
-            $sql = "SELECT * FROM usuario WHERE login = '$login' and senha = '$senha'";
-            $resultado = mysqli_query($connect,$sql);
-
-            if(mysqli_num_rows($resultado)):
+            $sql = "SELECT senha FROM usuario WHERE login = '$login'";
+            $resultado = mysqli_query($connect,$sql);  
+            $senhaSegura = mysqli_fetch_array($resultado);
+            if(password_verify($senha,$senhaSegura['senha'])):
+                $sql = "SELECT * FROM usuario WHERE login='$login'";
+                $resultado = mysqli_query($connect,$sql);
                 $dados = mysqli_fetch_array($resultado);
                 mysqli_close($connect);
                 $_SESSION['logado'] = true;

@@ -24,9 +24,9 @@ if(isset($_POST['btn-cadastro'])):
     $email = Clear($_POST['email']);
     $idade = Clear($_POST['idade']);
     $senha = Clear($_POST['Csenha']);
-
+    $senhaSegura = password_hash($senha,PASSWORD_DEFAULT);
     if (!$vazio):
-        $sql = "INSERT INTO usuario (nome,login,email,idade,senha) VALUES ('$nome','$login','$email','$idade',md5('$senha'))";
+        $sql = "INSERT INTO usuario (nome,login,email,idade,senha) VALUES ('$nome','$login','$email','$idade','$senhaSegura')";
     else:
         $_SESSION['mensagem'] = "Erro ao cadastrar!";
         header('location: index.php?Erro');

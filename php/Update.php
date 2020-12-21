@@ -25,9 +25,10 @@ if(isset($_POST['btn-atualiza'])):
     $idade = Clear($_POST['idade']);
     $senha = Clear($_POST['Csenha']);
     $id = Clear($_POST['id']);
+    $senhaSegura = password_hash($senha,PASSWORD_DEFAULT);
 
     if (!$vazio):
-        $sql = "UPDATE usuario SET nome='$nome',login='$login',email='$email',idade='$idade',senha=md5('$senha') WHERE id='$id' ";
+        $sql = "UPDATE usuario SET nome='$nome',login='$login',email='$email',idade='$idade',senha='$senhaSegura' WHERE id='$id' ";
     else:
         $_SESSION['mensagem'] = "Erro ao Atualizar!";
         header('location: index.php');
