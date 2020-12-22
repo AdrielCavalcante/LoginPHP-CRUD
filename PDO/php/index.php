@@ -1,19 +1,79 @@
 <?php
-
-use dao\usuarioDAO;
-use model\Usuario;
-
+//Namespaces
+use Factory\Connect;
+//Conexões
 require_once 'Factory/Connect.php';
-require_once 'model/Usuario.php';
-require_once 'dao/UsuarioDAO.php';
 
-$usuario = new usuario();
+//sessão
+session_start();
+if(isset($_SESSION['mensagem'])):
+    echo "<h6>".$_SESSION['mensagem']."</h6>";
+endif;
+session_unset();
+// Botão enviar
+if(isset($_POST['btn'])):
+    $erros = array();
+    $login = preg_replace('/[^[:alpha:]_]/', '',$_POST['login']);
+    $senha = $_POST['senha'];
+    if (empty($login) or empty($senha)):
+        $erros[] = "<li>O Campo login e senha precisam estar preenchidos!</li>"; 
+    else:
+        $sql = "SELECT login FROM usuario WHERE (login = '$login')";
+        $stmt = Connect::GetConexao()->prepare($sql);
+        $stmt->execute();
+        if ($stmt->rowCount() > 0):
+            $sql = "SELECT senha FROM usuario WHERE (login = '$login')";
+            $stmt = Connect::GetConexao()->prepare($sql);
+            $stmt->execute();
+            $senhaSegura = $stmt->fetch();
+            if(password_verify($senha,$senhaSegura['senha'])):
+                $sql = "SELECT * FROM usuario WHERE (login = '$login')";
+                $stmt = Connect::GetConexao()->prepare($sql);
+                $stmt->execute();
+                $dados = $stmt->fetch();
+                $_SESSION['logado'] = true;
+                $_SESSION['id_usuario'] = $dados['id'];
+                header('location: home.php');
+            else: 
+                $erros[] = "<li>Usuários e senhas não conferem!</li>";
+            endif;
+        else:
+            $erros[] = "<li>Usuário inexistente!</li>";
+        endif;
+    endif;
+endif;
 
-
-$dao = new usuarioDAO();
-$dao->Select($usuario);
-
-foreach($dao->Select() as $usuario):
-    echo $usuario['nome']."<br>".$usuario['login']."<br>".$usuario['email']."<br>".$usuario['idade']."<br>".$usuario['senha']."<hr>";
-endforeach;
 ?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Login</title>
+</head>
+<body>
+    
+    <?php
+        if(!empty($erros)):
+            foreach($erros as $erro):
+                echo $erro;
+            endforeach;
+        endif;
+    ?>
+    
+    
+    <form class="caixa" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <h1>Login</h1>
+        <input type="text" name="login" placeholder="Login">
+        <input type="password" name="senha" placeholder="Senha">
+        <button type="submit" name="btn">Entrar</button>
+        <a href="CriarConta.php"><button type="button" id="criar">Criar conta</button></a>
+        <a href="ConsultarConta.php"><button type="button" id="gerenciar">Gerenciar contas</button></a> 
+        <h5>Obs: Ler o db_connect.php!!!</h5>
+    </form>
+        
+    
+</body>
+</html>

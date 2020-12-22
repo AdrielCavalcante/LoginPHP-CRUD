@@ -3,13 +3,13 @@
 namespace Factory;
 
 class Connect{
-    private static $istancia;
+    private static $con;
 
     public static function GetConexao(){
-        if (!isset(self::$istancia)):
-            self::$istancia = new \PDO('mysql:host=localhost;dbname=loginPHP;charset=utf8','root','');
+        if (!isset(self::$con)):
+            self::$con = new \PDO('mysql:host=localhost;dbname=loginPHP;charset=utf8','root','');
         endif;
-            return self::$istancia;
+            return self::$con;
     }
 }
 

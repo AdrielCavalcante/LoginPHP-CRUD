@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #1f2e59;
+}
+
+.atualiza{
+    position: absolute;
+    background-color: rgb(73, 85, 126);
+    max-width: 400px;
+    width: 100%;
+    padding: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border-color: lightgray;
+    border-style:dashed;
+}
+
+.atualiza h1{
+    color:rgb(19, 18, 18);
+    text-transform: uppercase;
+    font-weight: 500;
+    
+}
+
+.atualiza input[type = "text"],.atualiza input[type = "email"],.atualiza input[type = "number"], .atualiza input[type = "password"]{
+    border: 0;
+    background: lightgrey;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid blueviolet;
+    padding: 14px 10px;
+    max-width: 250px;
+    width: 100%;
+    outline: none;
+    color: rgb(14, 21, 22);
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.atualiza input[type = "text"]:focus,.atualiza input[type = "email"]:focus,.atualiza input[type = "number"]:focus, .atualiza input[type = "password"]:focus{
+    max-width: 300px;
+    width: 100%;
+    border: 2px solid purple;
+}
+
+.atualiza button{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid purple;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.atualiza button:hover{
+    background: purple;
+}

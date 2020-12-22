@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #1f2e59;
+}
+
+#divi{
+    position: absolute;
+    background-color: rgb(73, 85, 126);
+    max-width: 800px;
+    width: 100%;
+    padding: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border-color: lightgray;
+    border-style:dashed;
+}
+
+#divi a#sair{
+    position: absolute;
+    color: white;
+    top: 87%;
+    left: 48%;
+    text-decoration: none;
+    display: block;
+    font-size: 20pt;
+}
+
+#divi a#sair:hover{
+    color: black;
+}
+
+#divi h1{
+    color:rgb(0, 0, 0);
+    font-weight: 500;
+    font-size: 35pt;
+    text-align: center;
+    margin-top: 0px;
+    
+}
+
+#divi h3#txt1{
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    max-width: 450px;
+    width: 45%;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+#divi h3#txt2{
+    max-width: 450px;
+    width: 45%;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    top: 44%;
+}
+
+#divi button#btn1{
+    background: none;
+    display: block;
+    position: absolute;
+    top: 65%;
+    left: 18%;
+    text-align: center;
+    border: 2px solid rgb(72, 205, 217);
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    width: 120px;
+    height: 30px;
+}
+
+#divi button#btn1:hover{
+    background: rgb(72, 205, 217);
+}
+
+#divi button#btn2{
+    background: none;
+    display: block;
+    position: absolute;
+    top: 65%;
+    left: 67%;
+    text-align: center;
+    border: 2px solid rgb(205, 50, 50);
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    width: 120px;
+    height: 30px;
+}
+
+#divi button#btn2:hover{
+    background: rgb(205, 50, 50);
+}
+

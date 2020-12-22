@@ -4,7 +4,7 @@ namespace dao;
 
 use Factory\Connect;
 use model\Usuario;
-
+require_once 'model/Usuario.php';
 $u = new usuario();
 
 class usuarioDAO{

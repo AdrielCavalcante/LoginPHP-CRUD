@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #1f2e59;
+}
+
+.deleta{
+    position: absolute;
+    background-color: rgb(73, 85, 126);
+    max-width: 520px;
+    width: 100%;
+    padding: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border-color: lightgray;
+    border-style:dashed;
+}
+
+.deleta h1{
+    color:rgb(0, 0, 0);
+    font-weight: 500;
+    font-size: 35pt;
+    text-align: center;
+    margin-top: 0px;
+    
+}
+
+.deleta h2{
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.deleta button#btns{
+    background: none;
+    display: block;
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    text-align: center;
+    border: 2px solid rgb(72, 205, 217);
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    width: 120px;
+    height: 30px;
+}
+
+.deleta button#btns:hover{
+    background: rgb(72, 205, 217);
+}
+
+.deleta button#btnn{
+    background: none;
+    display: block;
+    position: absolute;
+    top: 85%;
+    left: 40%;
+    text-align: center;
+    border: 2px solid rgb(205, 50, 50);
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    width: 120px;
+    height: 30px;
+}
+
+.deleta button#btnn:hover{
+    background: rgb(205, 50, 50);
+}
+
