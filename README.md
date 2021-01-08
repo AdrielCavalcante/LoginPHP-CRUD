@@ -16,6 +16,6 @@
 
 - 2️⃣ Abra o a pasta **www** e crie uma pasta chamada **SistemaLoginPHP**.
 
-- 3️⃣ Abra o console MySQL ou o PHPMYADMIN e crie um banco de dados, o nome do banco é SistemaLoginPHP | Tabela = usuario | campos = id(Chave primária), nome(varchar255), login(varchar255), email(varchar255), idade(int3), senha(varchar32) | valor inserido para o login ADM = login=admin, senha=1234
+- 3️⃣ Abra o console MySQL ou o PHPMYADMIN e crie um banco de dados, o nome do banco é SistemaLoginPHP | Tabela = usuario | campos = id(Chave primária), nome(varchar255), login(varchar255), email(varchar255), idade(int3), senha(varchar255) | valor inserido para o login ADM = login=admin, senha=1234
 
 - 4️⃣ Abrir o Localhost pelo Wamp e inserir na url, após o Localhost. "/SistemaLoginPHP"
