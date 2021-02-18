@@ -46,7 +46,12 @@ endif;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Estilos -->
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Fonte -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+
     <title>Login</title>
 </head>
 <body>
@@ -60,14 +65,14 @@ endif;
     ?>
     
     
-    <form class="caixa" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+    <form class="caixa" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
         <h1>Login</h1>
-        <input type="text" name="login" placeholder="Login">
-        <input type="password" name="senha" placeholder="Senha">
+        <input class="form-control" type="text" name="login" placeholder="Login">
+        <input class="form-control" type="password" name="senha" placeholder="Senha">
         <button type="submit" name="btn">Entrar</button>
-        <a href="CriarConta.php"><button type="button" id="criar">Criar conta</button></a>
-        <a href="ConsultarConta.php"><button type="button" id="gerenciar">Gerenciar contas</button></a> 
-        <h5>Obs: Ler o db_connect.php!!!</h5>
+        <a href="CriarConta.php" class="main-btn" id="criar">Criar conta</a>
+        <a href="ConsultarConta.php" class="main-btn" id="gerenciar">Gerenciar contas</a> 
+        <h5>Obs: Ler o db_connect.php</h5>
     </form>
         
     
