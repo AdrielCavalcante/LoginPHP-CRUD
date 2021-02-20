@@ -31,6 +31,7 @@ endif;
         <input type="number" name="idade" placeholder="Sua idade" value="<?php echo $dados['idade']; ?>">
         <input type="password" name="Csenha" placeholder="Insira a senha novamente">
         <button type="submit" name="btn-atualiza">Atualizar</button>
+        <a class="main-btn" href="home.php">Voltar</a>
     </form>
 </body>
 </html>

@@ -31,7 +31,7 @@ mysqli_close($connect);
     <h3 id="txt2">Clique aqui para deletar a conta:</h3>
     <a href="AtualizarConta.php?id=<?php echo $dados['id']; ?>"><button id="btn1">Editar</button></a>
     <a href="DeletarConta.php?id=<?php echo $dados['id']; ?>"><button id="btn2">Deletar</button></a>
-    <a href="logout.php" id="sair">Sair</a>
+    <a class="main-btn" href="logout.php" id="sair">Sair</a>
     </div>
 </body>
 </html>

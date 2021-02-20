@@ -30,7 +30,7 @@ endif;
         <input type="text" name="login" placeholder="Login">
         <input type="password" name="senha" placeholder="Senha">
         <button type="submit" name="btn-selecionar">Entrar</button>
-        <a href="index.php">Voltar</a>
+        <a href="index.php" class="main-btn">Voltar</a> 
     </form>
 </body>
 </html>

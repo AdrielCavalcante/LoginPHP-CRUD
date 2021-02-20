@@ -72,9 +72,6 @@ endif;
         <button type="submit" name="btn">Entrar</button>
         <a href="CriarConta.php" class="main-btn" id="criar">Criar conta</a>
         <a href="ConsultarConta.php" class="main-btn" id="gerenciar">Gerenciar contas</a> 
-        <h5>Obs: Ler o db_connect.php</h5>
-    </form>
-        
-    
+    </form> 
 </body>
 </html>

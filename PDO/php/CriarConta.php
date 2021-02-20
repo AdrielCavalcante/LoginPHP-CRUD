@@ -15,6 +15,7 @@
         <input type="number" name="idade" placeholder="Sua idade">
         <input type="password" name="Csenha" placeholder="Sua senha">
         <button type="submit" name="btn-cadastro">Cadastrar</button>
+        <a href="index.php" class="main-btn">Voltar</a> 
     </form>
 </body>
 </html>

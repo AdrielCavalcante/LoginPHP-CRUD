@@ -3,28 +3,44 @@
 body{
     padding: 0%;
     margin: 0%;
-    background-color: lightgrey;    
-}
-
-a{
-    position: absolute;
-    text-decoration: none;
-    font-size: 18pt;
-    font-weight: bold;
-    color: black;
-    transform: translate(-50%,-50%);
-    top: 20%;
-    left: 50%;
-}
-
-a:hover{
-    text-decoration: underline;
+    background-image: url("../img/violeta.jpg");
+    font-family: 'Roboto', sans-serif;  
 }
 
 h3{
+    color: rgb(212, 200, 200);
     font-size: 28pt;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
+}
+
+.main-btn {
+    display: block;
+    background-color: #8A2BE2;
+    color: #FFF;
+    text-transform: uppercase;
+    width: 80px;
+    height: 23px;
+    padding: 10px 10px;
+    border-radius: 24px;
+    border: 2px solid #8A2BE2;
+    outline: none;
+    transition: .5s;
+    padding-bottom: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8px;
+    text-decoration: transparent;
+    text-align: center;
+}
+
+.main-btn:focus{
+    outline: none;
+}
+
+.main-btn:hover {
+    text-decoration: none;
+    background-color: transparent;
 }
 
 table{
@@ -50,5 +66,5 @@ table td{
 	text-align: center;
 	vertical-align: top;
     font-weight: bold;
-    background: none;
+    background: lightgrey;
 }

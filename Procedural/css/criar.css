@@ -24,7 +24,7 @@ body{
 }
 
 .adiciona h1{
-    color:rgb(236, 228, 228);
+    color: #FFF;
     text-transform: uppercase;
     font-weight: 500;
     
@@ -78,8 +78,8 @@ body{
     background-color: #8A2BE2;
     color: #FFF;
     text-transform: uppercase;
-    width: 150px;
-    height: 45px;
+    width: 100px;
+    height: 26px;
     padding: 12px 20px;
     border-radius: 20px;
     border: 2px solid #8A2BE2;
@@ -89,6 +89,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
+    text-decoration: transparent;
 }
 
 .main-btn:focus{

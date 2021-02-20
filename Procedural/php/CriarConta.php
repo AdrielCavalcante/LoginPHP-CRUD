@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <!-- Estilos -->
     <link rel="stylesheet" href="../css/criar.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Fonte -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
     <title>Adicionar</title>
@@ -18,7 +17,7 @@
         <input type="number" name="idade" placeholder="Sua idade">
         <input type="password" name="Csenha" placeholder="Sua senha">
         <button type="submit" name="btn-cadastro">Cadastrar</button>
-        <a href="index.php" class="main-btn" id="gerenciar">Voltar</a> 
+        <a href="index.php" class="main-btn">Voltar</a> 
     </form>
 </body>
 </html>
