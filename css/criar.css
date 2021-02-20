@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+body{
+    padding: 0;
+    margin: 0;
+    background-image: url("../img/violeta.jpg");
+    font-family: 'Roboto', sans-serif;
+}
+
+.adiciona{
+    position: absolute;
+    background-color: transparent;
+    max-width: 550px;
+    width: 100%;
+    padding: 0px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border: 2px solid #8a2be2;
+    border-radius: 15px;
+    -webkit-backdrop-filter: blur(5px); /* Safari 9+ */
+    backdrop-filter: blur(5px); /* Chrome and Opera */   
+}
+
+.adiciona h1{
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 500;
+    
+}
+
+.adiciona input[type = "text"],.adiciona input[type = "email"],.adiciona input[type = "number"], .adiciona input[type = "password"]{
+    background: lightgrey;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid blueviolet;
+    padding: 14px 10px;
+    max-width: 400px;
+    width: 100%;
+    outline: none;
+    color: rgb(14, 21, 22);
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.adiciona input[type = "text"]:focus,.adiciona input[type = "email"]:focus,.adiciona input[type = "number"]:focus, .adiciona input[type = "password"]:focus{
+    max-width: 480px;
+    width: 100%;
+    border: 2px solid purple;
+}
+
+.adiciona button{
+    display: block;
+    background-color: #5b08a8;
+    color: #FFF;
+    text-transform: uppercase;
+    width: 150px;
+    height: 45px;
+    padding: 3px 20px;
+    border-radius: 20px;
+    border: 2px solid #5b08a8;
+    outline: none;
+    transition: .5s;
+    padding-bottom: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.adiciona button:hover{
+    background: transparent;
+}
+
+.main-btn {
+    display: block;
+    background-color: #8A2BE2;
+    color: #FFF;
+    text-transform: uppercase;
+    width: 100px;
+    height: 26px;
+    padding: 12px 20px;
+    border-radius: 20px;
+    border: 2px solid #8A2BE2;
+    outline: none;
+    transition: .5s;
+    padding-bottom: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    text-decoration: transparent;
+}
+
+.main-btn:focus{
+    outline: none;
+}
+
+.main-btn:hover {
+    text-decoration: none;
+    background-color: transparent;
+    color: #FFF;
+}

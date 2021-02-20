@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+body{
+    padding: 0;
+    margin: 0;
+    background-image: url("../img/violeta.jpg");
+    font-family: 'Roboto', sans-serif;
+}
+
+#divi{
+    position: absolute;
+    background-color: transparent;
+    max-width: 800px;
+    width: 100%;
+    padding: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border: 2px solid #8a2be2;
+    border-radius: 15px;
+    -webkit-backdrop-filter: blur(5px); /* Safari 9+ */
+    backdrop-filter: blur(5px); /* Chrome and Opera */  
+}
+
+#divi h1{
+    color:rgb(212, 200, 200);
+    font-weight: 500;
+    font-size: 35pt;
+    text-align: center;
+    margin-top: 0px;
+    
+}
+
+#divi h3#txt1{
+    color: rgb(185, 178, 178);
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    max-width: 450px;
+    width: 45%;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+#divi h3#txt2{
+    color: rgb(185, 178, 178);
+    max-width: 450px;
+    width: 45%;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    top: 44%;
+}
+
+#divi button#btn1{
+    background: rgb(72, 205, 217);
+    display: block;
+    position: absolute;
+    top: 65%;
+    left: 18%;
+    text-align: center;
+    border: 2px solid rgb(72, 205, 217);
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    width: 120px;
+    height: 30px;
+    text-transform: uppercase;
+}
+
+#divi button#btn1:hover{
+    background: transparent;
+}
+
+#divi button#btn2{
+    background: rgb(205, 50, 50);
+    display: block;
+    position: absolute;
+    top: 65%;
+    left: 67%;
+    text-align: center;
+    border: 2px solid rgb(205, 50, 50);
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    width: 120px;
+    height: 30px;
+    text-transform: uppercase;
+}
+
+#divi button#btn2:hover{
+    background: transparent;
+}
+
+.main-btn {
+    display: block;
+    background-color: #8A2BE2;
+    color: #FFF;
+    text-transform: uppercase;
+    width: 70px;
+    height: 23px;
+    padding: 10px 20px;
+    border-radius: 24px;
+    border: 2px solid #8A2BE2;
+    outline: none;
+    transition: .5s;
+    padding-bottom: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -40px;
+    text-decoration: transparent;
+}
+
+.main-btn:focus{
+    outline: none;
+}
+
+.main-btn:hover {
+    text-decoration: none;
+    background-color: transparent;
+}
