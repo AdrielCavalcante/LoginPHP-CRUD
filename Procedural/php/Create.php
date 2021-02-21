@@ -2,7 +2,7 @@
 //Sessão
 session_start();
 //Conexão
-require_once 'db_connect.php';
+require_once '../../db_connect.php';
 //Clear
 function Clear($input){
     global $connect;
@@ -29,15 +29,15 @@ if(isset($_POST['btn-cadastro'])):
         $sql = "INSERT INTO usuario (nome,login,email,idade,senha) VALUES ('$nome','$login','$email','$idade','$senhaSegura')";
     else:
         $_SESSION['mensagem'] = "Erro ao cadastrar!";
-        header('location: index.php?Erro');
+        header('location: ../../index.php');
     endif;
 
     if (mysqli_query($connect,$sql)):
         $_SESSION['mensagem'] = "Cadastrado com Sucesso!";
-        header('location: index.php?Sucesso');
+        header('location: ../../index.php');
     else:
         $_SESSION['mensagem'] = "Erro ao cadastrar!";
-        header('location: index.php?Erro');
+        header('location: ../../index.php');
     endif;
 endif;
 

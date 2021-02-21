@@ -2,7 +2,7 @@
 //Sessão
 session_start();
 //Conexão
-require_once 'db_connect.php';
+require_once '../../db_connect.php';
 //Clear
 function Clear($input){
     global $connect;
@@ -31,14 +31,14 @@ if(isset($_POST['btn-atualiza'])):
         $sql = "UPDATE usuario SET nome='$nome',login='$login',email='$email',idade='$idade',senha='$senhaSegura' WHERE id='$id' ";
     else:
         $_SESSION['mensagem'] = "Erro ao Atualizar!";
-        header('location: index.php');
+        header('location: ../../index.php');
     endif;
     if (mysqli_query($connect,$sql)):
         $_SESSION['mensagem'] = "Atualizado com Sucesso!";
-        header('location: index.php');
+        header('location: ../../index.php');
     else:
         $_SESSION['mensagem'] = "Erro ao Atualizar!";
-        header('location: index.php');
+        header('location: ../../index.php');
     endif;
 endif;
 

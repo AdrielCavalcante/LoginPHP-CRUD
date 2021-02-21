@@ -2,7 +2,7 @@
 //Sessão
 session_start();
 //Conexão
-require_once 'db_connect.php';
+require_once '../../db_connect.php';
 
 if(isset($_POST['btn-deleta'])):
     $id = $_POST['id'];
@@ -11,10 +11,10 @@ if(isset($_POST['btn-deleta'])):
 
     if (mysqli_query($connect,$sql)):
         $_SESSION['mensagem'] = "Conta deletada com Sucesso!";
-        header('location: index.php?Sucesso');
+        header('location: Procedural/php/index.php');
     else:
         $_SESSION['mensagem'] = "Erro ao Deletar a conta!";
-        header('location: index.php?Erro');
+        header('location: Procedural/php/index.php');
     endif;
 endif;
 

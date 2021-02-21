@@ -9,7 +9,7 @@
     <title>Adicionar</title>
 </head>
 <body>
-    <form class="adiciona" action="../php/Create.php" method="POST">
+    <form class="adiciona" action="Create.php" method="POST">
         <h1>Cadastrar usuário</h1>
         <input type="text" name="nome" placeholder="Seu nome">
         <input type="text" name="Clogin" placeholder="Seu nome de Login">

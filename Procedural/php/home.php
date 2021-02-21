@@ -1,12 +1,12 @@
 <?php
 // Conexão de arquivos
-require_once 'db_connect.php';
+require_once '../../db_connect.php';
 //sessão
 session_start();
 
 //verificação
 if(!isset($_SESSION['logado'])):
-    header('Location: index.php');
+    header('Location: ../../index.php');
 endif;
 
 $id = $_SESSION['id_usuario'];

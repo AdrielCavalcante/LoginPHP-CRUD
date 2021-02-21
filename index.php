@@ -1,6 +1,6 @@
 <?php
 // Conexão de arquivos
-require_once 'Procedural/php/db_connect.php';
+require_once 'db_connect.php';
 //sessão
 session_start();
 if(isset($_SESSION['mensagem'])):
