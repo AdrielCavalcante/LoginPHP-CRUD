@@ -1,6 +1,6 @@
 <?php
 // Conexão de arquivos
-require_once 'db_connect.php';
+require_once 'Procedural/php/db_connect.php';
 //sessão
 session_start();
 if(isset($_SESSION['mensagem'])):
@@ -29,7 +29,7 @@ if(isset($_POST['btn'])):
                 mysqli_close($connect);
                 $_SESSION['logado'] = true;
                 $_SESSION['id_usuario'] = $dados['id'];
-                header('location: home.php');
+                header('location: Procedural/php/home.php');
             else: 
                 $erros[] = "<li>Usuários e senhas não conferem!</li>";
             endif;
@@ -47,7 +47,7 @@ endif;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Estilos -->
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Fonte -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
@@ -70,8 +70,8 @@ endif;
         <input class="form-control" type="text" name="login" placeholder="Login">
         <input class="form-control" type="password" name="senha" placeholder="Senha">
         <button type="submit" name="btn">Entrar</button>
-        <a href="CriarConta.php" class="main-btn" id="criar">Criar conta</a>
-        <a href="ConsultarConta.php" class="main-btn" id="gerenciar">Gerenciar contas</a> 
+        <a href="Procedural/php/CriarConta.php" class="main-btn" id="criar">Criar conta</a>
+        <a href="Procedural/php/ConsultarConta.php" class="main-btn" id="gerenciar">Gerenciar contas</a> 
     </form> 
 </body>
 </html>
