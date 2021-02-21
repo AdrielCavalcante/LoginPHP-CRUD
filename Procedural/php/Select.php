@@ -13,7 +13,7 @@ require_once '../../db_connect.php';
 <body>
     
         <h3>Usuários</h3>
-        <a href="index.php" class="main-btn">Sair</a>
+        <a href="../../index.php" class="main-btn">Sair</a>
         <table>
             <thead>
                 <tr>

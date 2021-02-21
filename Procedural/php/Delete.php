@@ -11,10 +11,10 @@ if(isset($_POST['btn-deleta'])):
 
     if (mysqli_query($connect,$sql)):
         $_SESSION['mensagem'] = "Conta deletada com Sucesso!";
-        header('location: Procedural/php/index.php');
+        header('location: ../../index.php');
     else:
         $_SESSION['mensagem'] = "Erro ao Deletar a conta!";
-        header('location: Procedural/php/index.php');
+        header('location: ../../index.php');
     endif;
 endif;
 

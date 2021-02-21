@@ -10,7 +10,7 @@ if(isset($_POST['btn-selecionar'])):
         if($login == 'admin' && $senha == '1234'):
             header('location: Select.php');
         else:
-            header('location: index.php');
+            header('location: ../../index.php');
         endif;
     endif;
 endif;
@@ -30,7 +30,7 @@ endif;
         <input type="text" name="login" placeholder="Login">
         <input type="password" name="senha" placeholder="Senha">
         <button type="submit" name="btn-selecionar">Entrar</button>
-        <a href="index.php" class="main-btn">Voltar</a> 
+        <a href="../../index.php" class="main-btn">Voltar</a> 
     </form>
 </body>
 </html>
