@@ -1,7 +1,6 @@
 <?php
 // Conexão de arquivos
 require_once 'db_connect.php';
-include_once("index.html");
 //sessão
 session_start();
 if(isset($_SESSION['mensagem'])):
