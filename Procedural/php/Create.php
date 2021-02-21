@@ -2,7 +2,7 @@
 //Sessão
 session_start();
 //Conexão
-require_once '../../db_connect.php';
+require_once 'db_connect.php';
 //Clear
 function Clear($input){
     global $connect;

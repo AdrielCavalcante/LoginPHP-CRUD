@@ -2,7 +2,7 @@
 //Sessão
 session_start();
 //Conexão
-require_once '../../db_connect.php';
+require_once 'db_connect.php';
 
 if(isset($_POST['btn-deleta'])):
     $id = $_POST['id'];

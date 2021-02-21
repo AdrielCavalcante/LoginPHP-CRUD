@@ -1,6 +1,6 @@
 <?php
 //Conexão
-require_once '../../db_connect.php';
+require_once 'db_connect.php';
 
 if(isset($_GET['id'])):
     $id = mysqli_escape_string($connect,$_GET['id']);

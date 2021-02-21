@@ -1,5 +1,5 @@
 <?php
-require_once '../../db_connect.php';
+require_once 'db_connect.php';
 
 if(isset($_POST['btn-selecionar'])):
     $login = mysqli_escape_string($connect,$_POST['login']);
