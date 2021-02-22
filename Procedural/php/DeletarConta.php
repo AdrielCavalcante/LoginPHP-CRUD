@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 //Conexão
 require_once 'db_connect.php';
 
@@ -20,7 +20,7 @@ endif;
     <title>Deletar</title>
 </head>
 <body>
-    <form class="deleta" action="delete.php" method="post">
+    <form class="deleta" action="Delete.php" method="post">
         <h1>Deletar usuário</h1>
         <h2>Você tem certeza que deseja deletar a conta?</h2>
         <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
